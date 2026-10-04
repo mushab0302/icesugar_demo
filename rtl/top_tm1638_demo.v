@@ -46,7 +46,6 @@ module top_tm1638_demo(
 
     // --- SCROLLING VARIABLES ---
     reg [4:0] scroll_idx;     // Holds the starting index (0 to 10)
-    reg [21:0] scroll_counter;// Slower clock divider for rate-limiting
     reg s1_prev, s2_prev;     // Edge-detection registers
     reg [23:0] scroll_cooldown; // Cooldown timer to prevent rapid multi-stepping
     
@@ -133,7 +132,6 @@ module top_tm1638_demo(
 
             // Initialize scrolling state
             scroll_idx <= 1;
-            scroll_counter <= 0;
             s1_prev <= 0;
             s2_prev <= 0;
             scroll_cooldown <= 0;
