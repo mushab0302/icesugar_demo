@@ -1,0 +1,8 @@
+# For the iCE40HX-8K Breakout Board
+
+set_io clk 35
+
+set_io tm_clk 4
+set_io tm_dio 2
+set_io tm_cs 9
+
